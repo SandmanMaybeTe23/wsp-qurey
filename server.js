@@ -4,6 +4,9 @@ import morgan from "morgan"
 
 const app = express()
 
+
+import indexRouter from "./routes/index.js"
+
 app.use(morgan("dev"))
 app.use(express.static("public"))
 
@@ -12,24 +15,7 @@ nunjucks.configure("views", {
     express: app
 })
 
-app.get("/", (req, res) => {
-    res.render("index.njk", {
-        title: "Vår första dynamiska sida",
-        message: "Med Nunjucks skapar vi magi!"
-    })
-})
-
-app.get("/about", (req, res) => {
-    res.render("about.njk", {
-        title: "Om oss",
-        message: "Detta är ett skolarbete av Billy."
-    })
-})
-
-app.get("/greeting", (req, res) => {
-    console.log(req.query)
-    res.send(`Hejsan ${req.query.name}, ${req.query.message}`)
-})
+app.use("/",indexRouter)
 
 
 // Skriv en ny route, till about sidan
