@@ -34,10 +34,28 @@ router.get("/greetings", (req, res) => {
 
 
 
-router.get("/move", (req, res) => {
-    const {movies} = JSON.parse(fs.readFileSync("./data/movies.json"))
-    res.json(movies[1]["title"])
-   
+const {movies} = JSON.parse(fs.readFileSync("./data/movies.json"))
+
+router.get("/movies", (req, res) => {
+    // res.json(movies)
+    res.render("movies.njk", {
+        title: "Alla filmer",
+        movies
+    })
+})
+
+router.get("/movies/:id", (req, res) => {
+    console.log(req.params)
+    const movie = movies.find(m => m.id === +req.params.id)
+    if (movie) {
+        // res.json(movie)
+        res.render("movie.njk", {
+            title: movie.title,
+            movie
+        })
+    } else {
+        res.status(404).json({error: "Movie not found"})
+    }
 })
 
 export default router

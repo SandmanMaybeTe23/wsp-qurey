@@ -3,16 +3,32 @@ body{
 }
 
 .container{
-    max-width: 60rem;
+    max-width: 100%;
+    padding: 10px;
 }
+
+
+.container_nav{
+    max-width: 100%;
+    padding: 10px;
+
+}
+
 
 ul{
     display: flex;
-    align-items: center;
-    background-color: white;    
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);  
+    border: solid black;  
 }
 
 li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     margin-left: 50px;
-    color: white;
+    color: rgb(0, 0, 0);
+    list-style: none;
+    
 }
+
