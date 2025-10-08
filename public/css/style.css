@@ -2,33 +2,46 @@ body{
     background-color: aqua;
 }
 
-.container{
-    max-width: 100%;
-    padding: 10px;
-}
+.navbar{
+    background-color:white ;
+    border: solid black;
 
-
-.container_nav{
-    max-width: 100%;
-    padding: 10px;
+    li{
+        padding-left: 10px;
+    }
 
 }
 
+.container {
+    max-width: 65rem;
+    margin-inline: auto;
+}
 
-ul{
+.movie-list {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(255, 255, 255);  
-    border: solid black;  
-}
-
-li{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: 50px;
-    color: rgb(0, 0, 0);
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: white;
+    border: solid rgb(0, 0, 0);
+    padding: 1rem;
+    margin: 0;
     list-style: none;
-    
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 12rem;
+
+    h1 {
+        line-height: 1;
+    }
+}
+
+
+
+
 
