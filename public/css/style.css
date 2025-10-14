@@ -3,11 +3,15 @@ body{
 }
 
 .navbar{
+    display: flex;
+    flex-wrap: wrap;
     background-color:white ;
     border: solid black;
 
     li{
         padding-left: 10px;
+        margin-left:50px;
+        list-style: none;
     }
 
 }
@@ -17,6 +21,7 @@ body{
     margin-inline: auto;
 }
 
+
 .movie-list {
     display: flex;
     flex-wrap: wrap;
@@ -25,8 +30,10 @@ body{
     background-color: white;
     border: solid rgb(0, 0, 0);
     padding: 1rem;
-    margin: 0;
+    margin: 50px;
     list-style: none;
+    max-height: 225px;
+    min-height: 225px;
 }
 
 .card {

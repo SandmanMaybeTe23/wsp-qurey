@@ -2,8 +2,9 @@
 
 {% block content %}
 <main class="container">
-    <ul class="movie-list">
-        {% for movie in movies %}
+
+    {% for movie in movies %}
+    <ul class="movie-list"> 
         <li class="card">
             <h1><a href="/movies/{{ movie.id }}">{{ movie.title }}</a></h1>          
             <p>{{ movie.director }}</p>
